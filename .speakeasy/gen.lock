@@ -1,16 +1,16 @@
 lockVersion: 2.0.0
-id: 615c0b6d-6716-4b36-914d-33240c563e22
+id: 04c85bdb-841d-476c-a2f6-932603686199
 management:
-  docChecksum: 364f59340cc013178910a0c0644f84ec
+  docChecksum: 522fc994120ac7fb423ae0f15e57d572
   docVersion: "1.0"
   speakeasyVersion: 1.770.0
   generationVersion: 2.893.0
-  releaseVersion: 2.1.15
-  configChecksum: db7ec9dad8a436fe15fe0bed742485c8
+  releaseVersion: 2.1.16
+  configChecksum: 9dc0f09532f8d5051dd1d12031a59b24
 persistentEdits:
-  generation_id: 9e88b8b3-5c3d-47e0-b322-6a35c9d59bb1
-  pristine_commit_hash: e125cb048e435a1fb90cf0c95f7ff35241edb90a
-  pristine_tree_hash: 25de0ccdac77d2a472aaba62e949ecb3d0676c57
+  generation_id: 93d23080-4ef3-42b5-9609-128785af82a6
+  pristine_commit_hash: dc65abf44780b3e264eb749588b6f815b1c09bc6
+  pristine_tree_hash: 88181b053b40ea36cba379e78544ef8a3a9a36a1
 features:
   go:
     additionalDependencies: 0.1.0
@@ -3201,8 +3201,8 @@ trackedFiles:
     pristine_git_object: d151470988236d9fd629922b960681af0455c86c
   docs/models/types/windowsize.md:
     id: ef653e2dc8e8
-    last_write_checksum: sha1:28399d41d4fb292f0257bc512560356db74afb1d
-    pristine_git_object: 2b60a0d32cdda922478a6732dcd154ba4aec0bb0
+    last_write_checksum: sha1:372466a1e4d2cfd4ecacebe0b5e34e338ec6cfe2
+    pristine_git_object: 7e9192ec276b74945cc79cd8f3b313b080fddee1
   docs/models/types/workflowexecutiondto.md:
     id: c3f7bd5ed224
     last_write_checksum: sha1:65d78acb0224c9291bf6f6ba9081af92150939f5
@@ -3281,8 +3281,8 @@ trackedFiles:
     pristine_git_object: ce7a6d44c702963a21059368b09d964de2a3bed1
   docs/sdks/prices/README.md:
     id: d73b281620ef
-    last_write_checksum: sha1:fa738244038b15fef2f1c274b6c4f9cd5fe315dd
-    pristine_git_object: 84a1e04fcecff62eddc54d741c8826b547408798
+    last_write_checksum: sha1:d0c7c3950a97b82cfd127d2ac401d1f6e059d66f
+    pristine_git_object: e3625f1fd459baaa9c66428dc37c3d84fe6c37fe
   docs/sdks/priceunits/README.md:
     id: 6c3daf82b8a1
     last_write_checksum: sha1:d890ce3564caab851d9c8eaaf2a03eea8cea9d59
@@ -3293,16 +3293,16 @@ trackedFiles:
     pristine_git_object: bd21859db85dd6b801f5cb42fb38416cb20f8d1b
   docs/sdks/scheduledtasks/README.md:
     id: bd2ee3b98e84
-    last_write_checksum: sha1:1a634d4cbcd53713136f48aab9375ff2b1598b2e
-    pristine_git_object: fe837d257bd76e9f0f91f31bae05ba92fcf4fef6
+    last_write_checksum: sha1:10ef7526558e49ac57e1edb6eabc9ac74555fb39
+    pristine_git_object: 82f1ffbe8c08192fbc1dc9fbcc8c39fb5ff4e5ed
   docs/sdks/secrets/README.md:
     id: 856a082980a1
     last_write_checksum: sha1:a9b098a642ba48975c021b29fa403ea93cfed87c
     pristine_git_object: f5434ae8adfd2b26db324751c5e3c965a556b553
   docs/sdks/subscriptions/README.md:
     id: 298b9ab3c3e0
-    last_write_checksum: sha1:ab2dd0921d6aa0af650ca1693db1267abe16fb38
-    pristine_git_object: a8d54ea775cfcb023f1de1791b625a788425190d
+    last_write_checksum: sha1:f2fadf1164d70b73c37d5f5a4c506ab959653a18
+    pristine_git_object: ca5a2b25170392d0a34272e7e6218698c9340b2e
   docs/sdks/tasks/README.md:
     id: 939441bde134
     last_write_checksum: sha1:265f7198fed461e64cdbb524c28315660351e132
@@ -5949,8 +5949,8 @@ trackedFiles:
     pristine_git_object: 950b1e286ffca1ff1b517ece6e6815d26a54aa6b
   models/types/windowsize.go:
     id: 45c82d430894
-    last_write_checksum: sha1:3b69985850bd5bf0182bd7c338c8ba4eb5af66a7
-    pristine_git_object: 9549184e020b59388ae7b816d344878ec0486d1c
+    last_write_checksum: sha1:cd240c4082271f16c3ae42c925c5512fd65824f0
+    pristine_git_object: 5c08a1201a6ff6bc0b9c3f3735544bf9ac48a717
   models/types/workflowexecutiondto.go:
     id: 751ed0e01679
     last_write_checksum: sha1:fbee6e49b6e4ad7d6055e22adeb8d5261ad155c6
@@ -6021,8 +6021,8 @@ trackedFiles:
     pristine_git_object: f10d3f30b289280a9415133c6bd0b4790aae8e5f
   tirdad.go:
     id: 68ff2a13be69
-    last_write_checksum: sha1:75421eef0fa15e4dee89273aef0227971f51e5f5
-    pristine_git_object: 7fd9f7d3bc8f8818937bf354f0d344425fd1be19
+    last_write_checksum: sha1:bb418d38ce95269488877671298d506fbc59b9bb
+    pristine_git_object: 8ad6bb15ac7a0f2ee79500b32a5802d6a6055916
   types/bigint.go:
     id: 6f911e1a03c3
     last_write_checksum: sha1:49b004005d0461fb04b846eca062b070b0360b31
@@ -6892,6 +6892,20 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+  cloneEnvironment:
+    speakeasy-default-clone-environment:
+      parameters:
+        path:
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "202":
+          application/json: {}
+        "400":
+          application/json: {}
+        "500":
+          application/json: {}
   ingestEvent:
     speakeasy-default-ingest-event:
       requestBody:
@@ -7025,6 +7039,20 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+  cloneFeature:
+    speakeasy-default-clone-feature:
+      parameters:
+        path:
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "201":
+          application/json: {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}
+        "400":
+          application/json: {}
+        "500":
+          application/json: {}
   createGroup:
     speakeasy-default-create-group:
       requestBody:
@@ -7069,10 +7097,30 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+  getIntegrationConfig:
+    speakeasy-default-get-integration-config:
+      responses:
+        "200":
+          application/json: {}
+        "500":
+          application/json: {}
   linkIntegrationMapping:
     speakeasy-default-link-integration-mapping:
       requestBody:
         application/json: {"entity_id": "<id>", "entity_type": "item_price", "provider_entity_id": "<id>", "provider_type": "<value>"}
+      responses:
+        "200":
+          application/json: {}
+        "400":
+          application/json: {}
+        "500":
+          application/json: {}
+  getEntityIntegrationMappings:
+    speakeasy-default-get-entity-integration-mappings:
+      parameters:
+        query:
+          entity_type: "<value>"
+          entity_id: "<id>"
       responses:
         "200":
           application/json: {}
@@ -7210,8 +7258,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
-  post_/plans/{id}/clone:
-    speakeasy-default-post-/plans/{id}/clone:
+  clonePlan:
+    speakeasy-default-clone-plan:
       parameters:
         path:
           id: "<id>"
@@ -7239,7 +7287,7 @@ examples:
   createPrice:
     speakeasy-default-create-price:
       requestBody:
-        application/json: {"billing_model": "PACKAGE", "billing_period": "HALF_YEARLY", "currency": "Serbian Dinar", "entity_id": "<id>", "entity_type": "PRICE", "invoice_cadence": "ARREAR", "price_unit_type": "CUSTOM", "type": "USAGE"}
+        application/json: {"billing_model": "FLAT_FEE", "billing_period": "DAILY", "currency": "Dong", "entity_id": "<id>", "entity_type": "PRICE", "invoice_cadence": "ADVANCE", "price_unit_type": "FIAT", "type": "FIXED"}
       responses:
         "201":
           application/json: {"addon": {"entitlements": [{"addon": {"prices": [{"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}]}, "feature": {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}, "plan": {}}]}, "meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}
@@ -7446,7 +7494,7 @@ examples:
   createSubscription:
     speakeasy-default-create-subscription:
       requestBody:
-        application/json: {"billing_period": "DAILY", "currency": "New Leu", "plan_id": "<id>"}
+        application/json: {"billing_period": "ONETIME", "currency": "Kwacha", "plan_id": "<id>"}
       responses:
         "201":
           application/json: {"latest_invoice": {"subscription": {"latest_invoice": {}, "plan": {"entitlements": [{"addon": {"prices": [{"addon": {}, "meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}]}, "feature": {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}, "plan": {}}]}}}, "plan": {"entitlements": [{"addon": {"prices": [{"addon": {}, "meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}]}, "feature": {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}, "plan": {}}]}}
@@ -7472,6 +7520,17 @@ examples:
       responses:
         "200":
           application/json: {}
+        "400":
+          application/json: {}
+        "500":
+          application/json: {}
+  querySubscriptionLineItems:
+    speakeasy-default-query-subscription-line-items:
+      requestBody:
+        application/json: {"active_filter": true}
+      responses:
+        "200":
+          application/json: {"items": [{"price": {"addon": {"entitlements": [{"addon": {"prices": [{"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}]}, "feature": {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}, "plan": {}}]}, "meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}}]}
         "400":
           application/json: {}
         "500":
@@ -7598,7 +7657,7 @@ examples:
         path:
           id: "<id>"
       requestBody:
-        application/json: {"billing_cadence": "RECURRING", "billing_cycle": "anniversary", "billing_period": "QUARTERLY", "proration_behavior": "create_prorations", "target_plan_id": "<id>"}
+        application/json: {"billing_cadence": "RECURRING", "billing_cycle": "anniversary", "billing_period": "ANNUAL", "proration_behavior": "none", "target_plan_id": "<id>"}
       responses:
         "200":
           application/json: {"invoice": {"subscription": {"latest_invoice": {"subscription": {"plan": {"entitlements": [{"addon": {"prices": [{"addon": {}, "meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}]}, "feature": {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}, "plan": {}}]}}}, "plan": {"entitlements": [{"addon": {"prices": [{"addon": {}, "meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}]}, "feature": {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}, "plan": {}}]}}}}
@@ -7612,7 +7671,7 @@ examples:
         path:
           id: "<id>"
       requestBody:
-        application/json: {"billing_cadence": "RECURRING", "billing_cycle": "calendar", "billing_period": "HALF_YEARLY", "proration_behavior": "create_prorations", "target_plan_id": "<id>"}
+        application/json: {"billing_cadence": "RECURRING", "billing_cycle": "anniversary", "billing_period": "ONETIME", "proration_behavior": "none", "target_plan_id": "<id>"}
       responses:
         "200":
           application/json: {}
@@ -7658,42 +7717,30 @@ examples:
           application/json: {}
         "500":
           application/json: {}
-  pauseSubscription:
-    speakeasy-default-pause-subscription:
+  executeSubscriptionModify:
+    speakeasy-default-execute-subscription-modify:
       parameters:
         path:
           id: "<id>"
       requestBody:
-        application/json: {"pause_mode": "scheduled"}
+        application/json: {"type": "inheritance"}
       responses:
         "200":
-          application/json: {}
+          application/json: {"changed_resources": {"invoices": [{"invoice": {"subscription": {"latest_invoice": {"subscription": {"plan": {"entitlements": [{"addon": {"prices": [{"addon": {}, "meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}]}, "feature": {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}, "plan": {}}]}}}, "plan": {"entitlements": [{"addon": {"prices": [{"addon": {}, "meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}]}, "feature": {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}, "plan": {}}]}}}}]}, "subscription": {"latest_invoice": {"subscription": {"plan": {"entitlements": [{"addon": {"prices": [{"addon": {}, "meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}]}, "feature": {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}, "plan": {}}]}}}, "plan": {"entitlements": [{"addon": {"prices": [{"addon": {}, "meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}]}, "feature": {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}, "plan": {}}]}}}
         "400":
           application/json: {}
         "500":
           application/json: {}
-  listSubscriptionPauses:
-    speakeasy-default-list-subscription-pauses:
-      parameters:
-        path:
-          id: "<id>"
-      responses:
-        "200":
-          application/json: [{}]
-        "400":
-          application/json: {}
-        "500":
-          application/json: {}
-  resumeSubscription:
-    speakeasy-default-resume-subscription:
+  previewSubscriptionModify:
+    speakeasy-default-preview-subscription-modify:
       parameters:
         path:
           id: "<id>"
       requestBody:
-        application/json: {"resume_mode": "auto"}
+        application/json: {"type": "trial_end"}
       responses:
         "200":
-          application/json: {}
+          application/json: {"changed_resources": {"invoices": [{"invoice": {"subscription": {"latest_invoice": {"subscription": {"plan": {"entitlements": [{"addon": {"prices": [{"addon": {}, "meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}]}, "feature": {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}, "plan": {}}]}}}, "plan": {"entitlements": [{"addon": {"prices": [{"addon": {}, "meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}]}, "feature": {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}, "plan": {}}]}}}}]}, "subscription": {"latest_invoice": {"subscription": {"plan": {"entitlements": [{"addon": {"prices": [{"addon": {}, "meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}]}, "feature": {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}, "plan": {}}]}}}, "plan": {"entitlements": [{"addon": {"prices": [{"addon": {}, "meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}]}, "feature": {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}, "plan": {}}]}}}
         "400":
           application/json: {}
         "500":
@@ -7821,7 +7868,7 @@ examples:
   createScheduledTask:
     speakeasy-default-create-scheduled-task:
       requestBody:
-        application/json: {"connection_id": "<id>", "entity_type": "credit_topups", "interval": "custom", "job_config": {}}
+        application/json: {"connection_id": "<id>", "entity_type": "credit_usage", "interval": "custom", "job_config": {}}
       responses:
         "201":
           application/json: {}
@@ -8063,6 +8110,17 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+  updateUser:
+    speakeasy-default-update-user:
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+        "400":
+          application/json: {}
+        "500":
+          application/json: {}
   queryUser:
     speakeasy-default-query-user:
       requestBody:
@@ -8286,151 +8344,6 @@ examples:
           application/json: {}
   queryWorkflow:
     speakeasy-default-query-workflow:
-      requestBody:
-        application/json: {}
-      responses:
-        "200":
-          application/json: {}
-        "400":
-          application/json: {}
-        "500":
-          application/json: {}
-  executeSubscriptionModify:
-    speakeasy-default-execute-subscription-modify:
-      parameters:
-        path:
-          id: "<id>"
-      requestBody:
-        application/json: {"type": "inheritance"}
-      responses:
-        "200":
-          application/json: {"changed_resources": {"invoices": [{"invoice": {"subscription": {"latest_invoice": {"subscription": {"plan": {"entitlements": [{"addon": {"prices": [{"addon": {}, "meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}]}, "feature": {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}, "plan": {}}]}}}, "plan": {"entitlements": [{"addon": {"prices": [{"addon": {}, "meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}]}, "feature": {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}, "plan": {}}]}}}}]}, "subscription": {"latest_invoice": {"subscription": {"latest_invoice": {}, "plan": {"entitlements": [{"addon": {"prices": [{"addon": {}, "meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}]}, "feature": {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}, "plan": {}}]}}}, "plan": {"entitlements": [{"addon": {"prices": [{"addon": {}, "meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}]}, "feature": {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}, "plan": {}}]}}}
-        "400":
-          application/json: {}
-        "500":
-          application/json: {}
-  getMeterUsagePreviewInvoice:
-    speakeasy-default-get-meter-usage-preview-invoice:
-      requestBody:
-        application/json: {"hide_zero_charges_line_items": false, "subscription_id": "<id>"}
-      responses:
-        "200":
-          application/json: {"subscription": {"latest_invoice": {"subscription": {"plan": {"entitlements": [{"addon": {"prices": [{"addon": {}, "meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}]}, "feature": {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}, "plan": {}}]}}}, "plan": {"entitlements": [{"addon": {"prices": [{"addon": {}, "meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}]}, "feature": {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}, "plan": {}}]}}}
-        "400":
-          application/json: {}
-        "500":
-          application/json: {}
-  cloneEnvironment:
-    speakeasy-default-clone-environment:
-      parameters:
-        path:
-          id: "<id>"
-      requestBody:
-        application/json: {}
-      responses:
-        "202":
-          application/json: {}
-        "400":
-          application/json: {}
-        "500":
-          application/json: {}
-  cloneFeature:
-    speakeasy-default-clone-feature:
-      parameters:
-        path:
-          id: "<id>"
-      requestBody:
-        application/json: {}
-      responses:
-        "201":
-          application/json: {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}
-        "400":
-          application/json: {}
-        "500":
-          application/json: {}
-  getMeterUsageAnalytics:
-    speakeasy-default-get-meter-usage-analytics:
-      requestBody:
-        application/json: {"aggregation_type": "COUNT", "end_time": "2024-02-01T00:00:00Z", "external_customer_id": "cust_123", "meter_ids": ["mtr_abc", "mtr_def"], "start_time": "2024-01-01T00:00:00Z"}
-      responses:
-        "200":
-          application/json: {"items": [{"event_count": 42, "meter_id": "mtr_abc", "points": [{"event_count": 10, "timestamp": "2024-01-01T00:00:00Z", "value": "100.0000"}], "total_value": "1234.5678"}]}
-        "400":
-          application/json: {}
-        "500":
-          application/json: {}
-  queryMeterUsage:
-    speakeasy-default-query-meter-usage:
-      requestBody:
-        application/json: {"aggregation_type": "WEIGHTED_SUM", "billing_anchor": "2024-01-15T00:00:00Z", "end_time": "2024-02-01T00:00:00Z", "external_customer_id": "cust_123", "meter_id": "mtr_abc", "start_time": "2024-01-01T00:00:00Z"}
-      responses:
-        "200":
-          application/json: {"event_count": 42, "meter_id": "mtr_abc", "points": [{"event_count": 10, "timestamp": "2024-01-01T00:00:00Z", "value": "100.0000"}], "total_value": "1234.5678"}
-        "400":
-          application/json: {}
-        "500":
-          application/json: {}
-  clonePlan:
-    speakeasy-default-clone-plan:
-      parameters:
-        path:
-          id: "<id>"
-      requestBody:
-        application/json: {}
-      responses:
-        "201":
-          application/json: {"entitlements": [{"addon": {"prices": [{"addon": {}, "meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}]}, "feature": {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}, "plan": {}}]}
-        "400":
-          application/json: {}
-        "500":
-          application/json: {}
-  querySubscriptionLineItems:
-    speakeasy-default-query-subscription-line-items:
-      requestBody:
-        application/json: {"active_filter": true}
-      responses:
-        "200":
-          application/json: {"items": [{"price": {"addon": {"entitlements": [{"addon": {"prices": [{"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}]}, "feature": {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}, "plan": {}}]}, "meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}}]}
-        "400":
-          application/json: {}
-        "500":
-          application/json: {}
-  previewSubscriptionModify:
-    speakeasy-default-preview-subscription-modify:
-      parameters:
-        path:
-          id: "<id>"
-      requestBody:
-        application/json: {"type": "grouped_invoicing"}
-      responses:
-        "200":
-          application/json: {"changed_resources": {"invoices": [{"invoice": {"subscription": {"latest_invoice": {"subscription": {"plan": {"entitlements": [{"addon": {"prices": [{"addon": {}, "meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}]}, "feature": {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}, "plan": {}}]}}}, "plan": {"entitlements": [{"addon": {"prices": [{"addon": {}, "meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}]}, "feature": {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}, "plan": {}}]}}}}]}, "subscription": {"latest_invoice": {"subscription": {"latest_invoice": {}, "plan": {"entitlements": [{"addon": {"prices": [{"addon": {}, "meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}]}, "feature": {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}, "plan": {}}]}}}, "plan": {"entitlements": [{"addon": {"prices": [{"addon": {}, "meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}, "plan": {}}]}, "feature": {"meter": {"created_at": "2024-03-20T15:04:05Z", "event_name": "api_request", "id": "550e8400-e29b-41d4-a716-446655440000", "name": "API Usage Meter", "status": "published", "tenant_id": "tenant123", "updated_at": "2024-03-20T15:04:05Z"}}, "plan": {}}]}}}
-        "400":
-          application/json: {}
-        "500":
-          application/json: {}
-  getIntegrationConfig:
-    speakeasy-default-get-integration-config:
-      responses:
-        "200":
-          application/json: {}
-        "500":
-          application/json: {}
-  getEntityIntegrationMappings:
-    speakeasy-default-get-entity-integration-mappings:
-      parameters:
-        query:
-          entity_type: "<value>"
-          entity_id: "<id>"
-      responses:
-        "200":
-          application/json: {}
-        "400":
-          application/json: {}
-        "500":
-          application/json: {}
-  updateUser:
-    speakeasy-default-update-user:
       requestBody:
         application/json: {}
       responses:

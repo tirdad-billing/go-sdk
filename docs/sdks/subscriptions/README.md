@@ -55,8 +55,8 @@ func main() {
     )
 
     res, err := s.Subscriptions.CreateSubscription(ctx, types.CreateSubscriptionRequest{
-        BillingPeriod: types.BillingPeriodDaily,
-        Currency: "New Leu",
+        BillingPeriod: types.BillingPeriodOnetime,
+        Currency: "Kwacha",
         PlanID: "<id>",
     })
     if err != nil {
@@ -782,8 +782,8 @@ func main() {
     res, err := s.Subscriptions.ExecuteSubscriptionChange(ctx, "<id>", types.SubscriptionChangeRequest{
         BillingCadence: types.BillingCadenceRecurring,
         BillingCycle: types.BillingCycleAnniversary,
-        BillingPeriod: types.BillingPeriodQuarterly,
-        ProrationBehavior: types.ProrationBehaviorCreateProrations,
+        BillingPeriod: types.BillingPeriodAnnual,
+        ProrationBehavior: types.ProrationBehaviorNone,
         TargetPlanID: "<id>",
     })
     if err != nil {
@@ -842,9 +842,9 @@ func main() {
 
     res, err := s.Subscriptions.PreviewSubscriptionChange(ctx, "<id>", types.SubscriptionChangeRequest{
         BillingCadence: types.BillingCadenceRecurring,
-        BillingCycle: types.BillingCycleCalendar,
-        BillingPeriod: types.BillingPeriodHalfYearly,
-        ProrationBehavior: types.ProrationBehaviorCreateProrations,
+        BillingCycle: types.BillingCycleAnniversary,
+        BillingPeriod: types.BillingPeriodOnetime,
+        ProrationBehavior: types.ProrationBehaviorNone,
         TargetPlanID: "<id>",
     })
     if err != nil {
@@ -1121,7 +1121,7 @@ func main() {
     )
 
     res, err := s.Subscriptions.PreviewSubscriptionModify(ctx, "<id>", types.ExecuteSubscriptionModifyRequest{
-        Type: types.SubscriptionModifyTypeGroupedInvoicing,
+        Type: types.SubscriptionModifyTypeTrialEnd,
     })
     if err != nil {
         log.Fatal(err)
