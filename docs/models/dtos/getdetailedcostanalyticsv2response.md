@@ -1,0 +1,9 @@
+# GetDetailedCostAnalyticsV2Response
+
+
+## Fields
+
+| Field                                                                                             | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                        | [types.HTTPMetadata](../../models/types/httpmetadata.md)                                          | :heavy_check_mark:                                                                                | N/A                                                                                               |
+| `GetDetailedCostAnalyticsResponse`                                                                | [*types.GetDetailedCostAnalyticsResponse](../../models/types/getdetailedcostanalyticsresponse.md) | :heavy_minus_sign:                                                                                | OK                                                                                                |

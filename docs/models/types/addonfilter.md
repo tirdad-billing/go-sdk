@@ -1,0 +1,18 @@
+# AddonFilter
+
+
+## Fields
+
+| Field                                                             | Type                                                              | Required                                                          | Description                                                       |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `AddonIds`                                                        | []`string`                                                        | :heavy_minus_sign:                                                | N/A                                                               |
+| `EndTime`                                                         | [*time.Time](https://pkg.go.dev/time#Time)                        | :heavy_minus_sign:                                                | N/A                                                               |
+| `Expand`                                                          | `*string`                                                         | :heavy_minus_sign:                                                | N/A                                                               |
+| `Filters`                                                         | [][types.FilterCondition](../../models/types/filtercondition.md)  | :heavy_minus_sign:                                                | filters allows complex filtering based on multiple fields         |
+| `Limit`                                                           | `*int64`                                                          | :heavy_minus_sign:                                                | N/A                                                               |
+| `LookupKeys`                                                      | []`string`                                                        | :heavy_minus_sign:                                                | N/A                                                               |
+| `Offset`                                                          | `*int64`                                                          | :heavy_minus_sign:                                                | N/A                                                               |
+| `Order`                                                           | [*types.AddonFilterOrder](../../models/types/addonfilterorder.md) | :heavy_minus_sign:                                                | N/A                                                               |
+| `Sort`                                                            | [][types.SortCondition](../../models/types/sortcondition.md)      | :heavy_minus_sign:                                                | N/A                                                               |
+| `StartTime`                                                       | [*time.Time](https://pkg.go.dev/time#Time)                        | :heavy_minus_sign:                                                | N/A                                                               |
+| `Status`                                                          | [*types.Status](../../models/types/status.md)                     | :heavy_minus_sign:                                                | N/A                                                               |

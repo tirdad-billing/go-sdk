@@ -1,0 +1,9 @@
+# ExecuteSubscriptionModifyRequest
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ID`                                                                                             | `string`                                                                                         | :heavy_check_mark:                                                                               | Subscription ID                                                                                  |
+| `Body`                                                                                           | [types.ExecuteSubscriptionModifyRequest](../../models/types/executesubscriptionmodifyrequest.md) | :heavy_check_mark:                                                                               | Modification request                                                                             |

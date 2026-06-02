@@ -1,0 +1,31 @@
+# TransactionReason
+
+## Example Usage
+
+```go
+import (
+	"github.com/tirdad-billing/go-sdk/v2/models/types"
+)
+
+value := types.TransactionReasonInvoicePayment
+
+// Open enum: custom values can be created with a direct type cast
+custom := types.TransactionReason("custom_value")
+```
+
+
+## Values
+
+| Name                                       | Value                                      |
+| ------------------------------------------ | ------------------------------------------ |
+| `TransactionReasonInvoicePayment`          | INVOICE_PAYMENT                            |
+| `TransactionReasonFreeCreditGrant`         | FREE_CREDIT_GRANT                          |
+| `TransactionReasonSubscriptionCreditGrant` | SUBSCRIPTION_CREDIT_GRANT                  |
+| `TransactionReasonPurchasedCreditInvoiced` | PURCHASED_CREDIT_INVOICED                  |
+| `TransactionReasonPurchasedCreditDirect`   | PURCHASED_CREDIT_DIRECT                    |
+| `TransactionReasonCreditNote`              | CREDIT_NOTE                                |
+| `TransactionReasonCreditExpired`           | CREDIT_EXPIRED                             |
+| `TransactionReasonWalletTermination`       | WALLET_TERMINATION                         |
+| `TransactionReasonManualBalanceDebit`      | MANUAL_BALANCE_DEBIT                       |
+| `TransactionReasonCreditAdjustment`        | CREDIT_ADJUSTMENT                          |
+| `TransactionReasonInvoiceVoidRefund`       | INVOICE_VOID_REFUND                        |

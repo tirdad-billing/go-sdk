@@ -1,0 +1,12 @@
+# ChangedSubscription
+
+
+## Fields
+
+| Field                                                                               | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `Action`                                                                            | [*types.ChangedSubscriptionAction](../../models/types/changedsubscriptionaction.md) | :heavy_minus_sign:                                                                  | created \| updated                                                                  |
+| `CurrentPeriodEnd`                                                                  | [*time.Time](https://pkg.go.dev/time#Time)                                          | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `ID`                                                                                | `*string`                                                                           | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `Status`                                                                            | [*types.SubscriptionStatus](../../models/types/subscriptionstatus.md)               | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `TrialEnd`                                                                          | [*time.Time](https://pkg.go.dev/time#Time)                                          | :heavy_minus_sign:                                                                  | N/A                                                                                 |

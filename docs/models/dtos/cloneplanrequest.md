@@ -1,0 +1,9 @@
+# ClonePlanRequest
+
+
+## Fields
+
+| Field                                                            | Type                                                             | Required                                                         | Description                                                      |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
+| `ID`                                                             | `string`                                                         | :heavy_check_mark:                                               | Source Plan ID                                                   |
+| `Body`                                                           | [types.ClonePlanRequest](../../models/types/cloneplanrequest.md) | :heavy_check_mark:                                               | Clone configuration                                              |

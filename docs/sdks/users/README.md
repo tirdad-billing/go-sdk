@@ -1,0 +1,226 @@
+# Users
+
+## Overview
+
+### Available Operations
+
+* [CreateUser](#createuser) - Create user or service account
+* [GetUserInfo](#getuserinfo) - Get current user
+* [UpdateUser](#updateuser) - Update current user
+* [QueryUser](#queryuser) - Query users
+
+## CreateUser
+
+Create a user account (type=user, email required; returns user + password for login) or a service account (type=service_account, roles required) for API/automation access.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createUser" method="post" path="/users" -->
+```go
+package main
+
+import(
+	"context"
+	tirdad "github.com/tirdad-billing/go-sdk/v2"
+	"github.com/tirdad-billing/go-sdk/v2/models/types"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := tirdad.New(
+        tirdad.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Users.CreateUser(ctx, types.CreateUserRequest{
+        Type: types.UserTypeUser,
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.CreateUserResponse != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                          | Type                                                               | Required                                                           | Description                                                        |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| `ctx`                                                              | [context.Context](https://pkg.go.dev/context#Context)              | :heavy_check_mark:                                                 | The context to use for the request.                                |
+| `request`                                                          | [types.CreateUserRequest](../../models/types/createuserrequest.md) | :heavy_check_mark:                                                 | The request object to use for the request.                         |
+| `opts`                                                             | [][dtos.Option](../../models/dtos/option.md)                       | :heavy_minus_sign:                                                 | The options for this request.                                      |
+
+### Response
+
+**[*dtos.CreateUserResponse](../../models/dtos/createuserresponse.md), error**
+
+### Errors
+
+| Error Type           | Status Code          | Content Type         |
+| -------------------- | -------------------- | -------------------- |
+| errors.ErrorResponse | 400                  | application/json     |
+| errors.ErrorResponse | 500                  | application/json     |
+| errors.APIError      | 4XX, 5XX             | \*/\*                |
+
+## GetUserInfo
+
+Use to show the logged-in user's profile in the UI or to check permissions and roles for the current session.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getUserInfo" method="get" path="/users/me" -->
+```go
+package main
+
+import(
+	"context"
+	tirdad "github.com/tirdad-billing/go-sdk/v2"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := tirdad.New(
+        tirdad.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Users.GetUserInfo(ctx)
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.UserResponse != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `opts`                                                | [][dtos.Option](../../models/dtos/option.md)          | :heavy_minus_sign:                                    | The options for this request.                         |
+
+### Response
+
+**[*dtos.GetUserInfoResponse](../../models/dtos/getuserinforesponse.md), error**
+
+### Errors
+
+| Error Type           | Status Code          | Content Type         |
+| -------------------- | -------------------- | -------------------- |
+| errors.ErrorResponse | 401                  | application/json     |
+| errors.ErrorResponse | 500                  | application/json     |
+| errors.APIError      | 4XX, 5XX             | \*/\*                |
+
+## UpdateUser
+
+Update the current authenticated user. Only metadata updates are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateUser" method="put" path="/users/me" -->
+```go
+package main
+
+import(
+	"context"
+	tirdad "github.com/tirdad-billing/go-sdk/v2"
+	"github.com/tirdad-billing/go-sdk/v2/models/types"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := tirdad.New(
+        tirdad.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Users.UpdateUser(ctx, types.UpdateUserRequest{})
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.UpdateUserResponse != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                          | Type                                                               | Required                                                           | Description                                                        |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| `ctx`                                                              | [context.Context](https://pkg.go.dev/context#Context)              | :heavy_check_mark:                                                 | The context to use for the request.                                |
+| `request`                                                          | [types.UpdateUserRequest](../../models/types/updateuserrequest.md) | :heavy_check_mark:                                                 | The request object to use for the request.                         |
+| `opts`                                                             | [][dtos.Option](../../models/dtos/option.md)                       | :heavy_minus_sign:                                                 | The options for this request.                                      |
+
+### Response
+
+**[*dtos.UpdateUserResponse](../../models/dtos/updateuserresponse.md), error**
+
+### Errors
+
+| Error Type           | Status Code          | Content Type         |
+| -------------------- | -------------------- | -------------------- |
+| errors.ErrorResponse | 400                  | application/json     |
+| errors.ErrorResponse | 500                  | application/json     |
+| errors.APIError      | 4XX, 5XX             | \*/\*                |
+
+## QueryUser
+
+Use when listing or searching service accounts in an admin UI, or when auditing who has API access and which roles they have.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="queryUser" method="post" path="/users/search" -->
+```go
+package main
+
+import(
+	"context"
+	tirdad "github.com/tirdad-billing/go-sdk/v2"
+	"github.com/tirdad-billing/go-sdk/v2/models/types"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := tirdad.New(
+        tirdad.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Users.QueryUser(ctx, types.UserFilter{})
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ListUsersResponse != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `request`                                             | [types.UserFilter](../../models/types/userfilter.md)  | :heavy_check_mark:                                    | The request object to use for the request.            |
+| `opts`                                                | [][dtos.Option](../../models/dtos/option.md)          | :heavy_minus_sign:                                    | The options for this request.                         |
+
+### Response
+
+**[*dtos.QueryUserResponse](../../models/dtos/queryuserresponse.md), error**
+
+### Errors
+
+| Error Type           | Status Code          | Content Type         |
+| -------------------- | -------------------- | -------------------- |
+| errors.ErrorResponse | 400                  | application/json     |
+| errors.ErrorResponse | 500                  | application/json     |
+| errors.APIError      | 4XX, 5XX             | \*/\*                |
