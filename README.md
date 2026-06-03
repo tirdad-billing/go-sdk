@@ -58,17 +58,17 @@ func main() {
 		log.Fatal("Set TIRDAD_API_KEY in .env or environment")
 	}
 
-	client := flexprice.New(
-		flexprice.WithServerURL(serverURL),
-		flexprice.WithSecurity(apiKey),
+	client := tirdad.New(
+		tirdad.WithServerURL(serverURL),
+		tirdad.WithSecurity(apiKey),
 	)
 	ctx := context.Background()
 
 	externalID := fmt.Sprintf("sample-customer-%d", time.Now().Unix())
 	_, err := client.Customers.CreateCustomer(ctx, types.CreateCustomerRequest{
 		ExternalID: externalID,
-		Name:       flexprice.String("Sample Customer"),
-		Email:      flexprice.String("sample@example.com"),
+		Name:       tirdad.String("Sample Customer"),
+		Email:      tirdad.String("sample@example.com"),
 	})
 	if err != nil {
 		log.Fatalf("CreateCustomer: %v", err)
@@ -95,7 +95,7 @@ func main() {
 }
 ```
 
-For more examples and all API operations, see the [API reference](https://docs.flexprice.io) and the [examples](examples/) in this repo.
+For more examples and all API operations, see the [API reference](https://docs.tirdad.io) and the [examples](examples/) in this repo.
 
 ## Optional fields and pointer helpers
 
@@ -125,24 +125,24 @@ func main() {
 		log.Fatal("Set TIRDAD_API_KEY in your environment")
 	}
 
-	client := flexprice.New(
-		flexprice.WithServerURL(serverURL),
-		flexprice.WithSecurity(apiKey),
+	client := tirdad.New(
+		tirdad.WithServerURL(serverURL),
+		tirdad.WithSecurity(apiKey),
 	)
 	ctx := context.Background()
 
 	externalID := fmt.Sprintf("acme-%d", time.Now().UnixNano())
 	resp, err := client.Customers.CreateCustomer(ctx, types.CreateCustomerRequest{
 		ExternalID: externalID,
-		Name:       flexprice.String("Acme Corp"),
-		Email:      flexprice.String("billing@acme.com"),
+		Name:       tirdad.String("Acme Corp"),
+		Email:      tirdad.String("billing@acme.com"),
 		// Optional address fields
-		AddressLine1:   flexprice.String("123 Main St"),
-		AddressCity:    flexprice.String("San Francisco"),
-		AddressState:   flexprice.String("CA"),
-		AddressCountry: flexprice.String("US"),
+		AddressLine1:   tirdad.String("123 Main St"),
+		AddressCity:    tirdad.String("San Francisco"),
+		AddressState:   tirdad.String("CA"),
+		AddressCountry: tirdad.String("US"),
 		// Generic helper for any type
-		Metadata: flexprice.Pointer(map[string]string{"plan_tier": "growth"}),
+		Metadata: tirdad.Pointer(map[string]string{"plan_tier": "growth"}),
 	})
 	if err != nil {
 		log.Fatalf("CreateCustomer: %v", err)
@@ -153,7 +153,7 @@ func main() {
 }
 ```
 
-Available helpers: `flexprice.String`, `flexprice.Bool`, `flexprice.Int`, `flexprice.Int64`, `flexprice.Float32`, `flexprice.Float64`, `flexprice.Pointer[T]`.
+Available helpers: `tirdad.String`, `tirdad.Bool`, `tirdad.Int`, `tirdad.Int64`, `tirdad.Float32`, `tirdad.Float64`, `tirdad.Pointer[T]`.
 
 ## Nil-safe getters
 
@@ -219,15 +219,15 @@ func main() {
 		log.Fatal("Set TIRDAD_API_KEY in your environment")
 	}
 
-	client := flexprice.New(
-		flexprice.WithServerURL(serverURL),
-		flexprice.WithSecurity(apiKey),
+	client := tirdad.New(
+		tirdad.WithServerURL(serverURL),
+		tirdad.WithSecurity(apiKey),
 	)
 	ctx := context.Background()
 
 	req := types.CreateCustomerRequest{
 		ExternalID: "acme-error-handling-example",
-		Name:       flexprice.String("Acme Corp"),
+		Name:       tirdad.String("Acme Corp"),
 	}
 
 	resp, err := client.Customers.CreateCustomer(ctx, req)
@@ -281,12 +281,12 @@ func main() {
 		log.Fatal("Set TIRDAD_API_KEY in your environment")
 	}
 
-	client := flexprice.New(
-		flexprice.WithServerURL(serverURL),
-		flexprice.WithSecurity(apiKey),
+	client := tirdad.New(
+		tirdad.WithServerURL(serverURL),
+		tirdad.WithSecurity(apiKey),
 	)
 
-	asyncConfig := flexprice.DefaultAsyncConfig()
+	asyncConfig := tirdad.DefaultAsyncConfig()
 	asyncConfig.Debug = true
 	asyncClient := client.NewAsyncClientWithConfig(asyncConfig)
 	defer asyncClient.Close()
@@ -299,7 +299,7 @@ func main() {
 	}
 
 	// Event with full options
-	if err := asyncClient.EnqueueWithOptions(flexprice.EventOptions{
+	if err := asyncClient.EnqueueWithOptions(tirdad.EventOptions{
 		EventName:          "file_upload",
 		ExternalCustomerID: "customer-123",
 		Properties:         map[string]interface{}{"file_size_bytes": 1048576},
@@ -318,8 +318,8 @@ func main() {
 
 ## Authentication
 
-- Set the API key via the `x-api-key` header. Initialize with `flexprice.New(flexprice.WithServerURL(serverURL), flexprice.WithSecurity(apiKey))`, where `serverURL` is a full URL (default `https://api.tirdad.ai/v1`) or use `WithServerIndex` / default server list if you omit `WithServerURL`.
-- Prefer environment variables; get keys from your [Tirdad dashboard](https://app.flexprice.io) or docs.
+- Set the API key via the `x-api-key` header. Initialize with `tirdad.New(tirdad.WithServerURL(serverURL), tirdad.WithSecurity(apiKey))`, where `serverURL` is a full URL (default `https://api.tirdad.ai/v1`) or use `WithServerIndex` / default server list if you omit `WithServerURL`.
+- Prefer environment variables; get keys from your [Tirdad dashboard](https://app.tirdad.io) or docs.
 
 ## Features
 
@@ -328,13 +328,13 @@ func main() {
 - Built-in retries and error handling
 - Optional async client for event batching
 
-For a full list of operations, see the [API reference](https://docs.flexprice.io) and the [examples](examples/) in this repo.
+For a full list of operations, see the [API reference](https://docs.tirdad.io) and the [examples](examples/) in this repo.
 
 ## Troubleshooting
 
 - **Missing or invalid API key:** Ensure `TIRDAD_API_KEY` is set and the key is active. Keys are usually server-side only; do not expose them in client-side code.
 - **Wrong base URL:** Use a full URL such as `https://api.tirdad.ai/v1` (include `/v1`; no trailing slash). For local dev use `http://localhost:8080/v1` if applicable.
-- **Non-202 on ingest:** Event ingest returns 202 Accepted; if you get 4xx/5xx, check request shape (e.g. `EventName`, `ExternalCustomerID`, `Properties`) and [API docs](https://docs.flexprice.io).
+- **Non-202 on ingest:** Event ingest returns 202 Accepted; if you get 4xx/5xx, check request shape (e.g. `EventName`, `ExternalCustomerID`, `Properties`) and [API docs](https://docs.tirdad.io).
 
 ## Handling Webhooks
 
@@ -443,6 +443,6 @@ func handleWebhook(w http.ResponseWriter, r *http.Request) {
 
 ## Documentation
 
-- [Tirdad API documentation](https://docs.flexprice.io)
+- [Tirdad API documentation](https://docs.tirdad.io)
 - [Go SDK examples](examples/) in this repo
 - [SDK integration tests](../tests/README.md) — full API coverage (different `TIRDAD_API_HOST` shape; see that README)

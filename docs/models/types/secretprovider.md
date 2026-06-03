@@ -18,7 +18,7 @@ custom := types.SecretProvider("custom_value")
 
 | Name                       | Value                      |
 | -------------------------- | -------------------------- |
-| `SecretProviderTirdad`  | flexprice                  |
+| `SecretProviderTirdad`  | tirdad                  |
 | `SecretProviderStripe`     | stripe                     |
 | `SecretProviderS3`         | s3                         |
 | `SecretProviderHubspot`    | hubspot                    |

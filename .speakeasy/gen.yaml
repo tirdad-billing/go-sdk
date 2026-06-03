@@ -31,7 +31,7 @@ generation:
     generateNewTests: true
     skipResponseBodyAssertions: false
 go:
-  version: 2.1.16
+  version: 2.1.17
   additionalDependencies: {}
   baseErrorName: TirdadError
   clientServerStatusCodesAsErrors: true
