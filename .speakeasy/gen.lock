@@ -1,16 +1,16 @@
 lockVersion: 2.0.0
-id: 778ea669-e543-400e-b3ec-cda7d69d9b52
+id: 966e0397-d1b0-4838-9d95-60faf013d2fa
 management:
-  docChecksum: f98761d6344b3cd02574ec46cb945fcf
+  docChecksum: 2950dc61350207463a68d568f22548a6
   docVersion: "1.0"
   speakeasyVersion: 1.778.0
   generationVersion: 2.904.2
-  releaseVersion: 2.1.18
-  configChecksum: 64d70458daafcb0850cae57e82d45e95
+  releaseVersion: 2.1.19
+  configChecksum: 8325c92ba2d6578ffdc2e08edd98c349
 persistentEdits:
-  generation_id: 178e14c2-e23d-4dc0-a800-9c814134da48
-  pristine_commit_hash: cecd50fb94722636c0aa585e060d6316cbaaa013
-  pristine_tree_hash: fe9d39cb238891e80e02a3be378bbb086e61fb4e
+  generation_id: df31762d-92f1-498f-b5b3-382f75ddb9f0
+  pristine_commit_hash: 44589637e1586629a3ef2f8bc1c900c02b921ff1
+  pristine_tree_hash: 63b9613f897cc91e2a0bbb2231d58958aa4342d3
 features:
   go:
     additionalDependencies: 0.1.0
@@ -57,8 +57,8 @@ trackedFiles:
     pristine_git_object: 8853364ce36233d73253c7109436750e52c073ed
   coupons.go:
     id: db41d25b9754
-    last_write_checksum: sha1:a837f24d71a2e1169ba985a61698ebbb2abf82a7
-    pristine_git_object: 9e0a31593464405cb1d30c017cffc4a786f8fb05
+    last_write_checksum: sha1:a42c410bf41e7adc70a2dbb84c0cde80d406de9e
+    pristine_git_object: dc2dad94a3472b99affc7c67ba07b00603d1f17d
   creditgrants.go:
     id: e7bd2f7641ea
     last_write_checksum: sha1:35f19f450cb6e785493f529de27c0d9b46b309b7
@@ -463,6 +463,14 @@ trackedFiles:
     id: 093c923398e5
     last_write_checksum: sha1:eff179ac7ff9f08b6004c3d495b744cb44ae397c
     pristine_git_object: 67657aaa85e2e4257cd7c6ac316ffe053133543c
+  docs/models/dtos/getcouponbycoderequest.md:
+    id: 5b34a76d4998
+    last_write_checksum: sha1:c5b113929790ca4e9ddfb54cfc9304884640c23c
+    pristine_git_object: 8860c0bfc76b6eeb5e477f711b42217e0f2c805a
+  docs/models/dtos/getcouponbycoderesponse.md:
+    id: d3930870eb58
+    last_write_checksum: sha1:2602696d456db2a3e8b2464a8f063f02dffec380
+    pristine_git_object: 947c7a4791d3093250677d6ef374e29ae61ba6c2
   docs/models/dtos/getcouponrequest.md:
     id: b036010518b7
     last_write_checksum: sha1:2a2fedc26fe39db45624854c092f5d7e3a3e3348
@@ -1821,8 +1829,8 @@ trackedFiles:
     pristine_git_object: d12988d06e1202a2295a7c9776a3a9708c0a0b1e
   docs/models/types/couponfilter.md:
     id: af865825938d
-    last_write_checksum: sha1:af8367577d3202d0b9567eaac5e5daffd6b56495
-    pristine_git_object: 0d213b5bfdd7dc17dd1bf0b47ec960699ef2fb1c
+    last_write_checksum: sha1:fa137ff26979f7b7b163b2d8a86e74b4bcbfe2ab
+    pristine_git_object: 8734cc992fdedd36c751be69c31f472e13aba4b3
   docs/models/types/couponfilterorder.md:
     id: 9ae5a0020625
     last_write_checksum: sha1:d6b7c2d3e2225681507aea74f782085b18675914
@@ -2813,8 +2821,8 @@ trackedFiles:
     pristine_git_object: c8cd9632ee8bb5a39236a3c4062ce48b2efd03bd
   docs/models/types/submodifycouponparams.md:
     id: 2da798a4cd6b
-    last_write_checksum: sha1:987f7ae71216060e28be7dd54c560a346b165e8f
-    pristine_git_object: 15278563228bc3171696d92646f0dedde80353d7
+    last_write_checksum: sha1:4ebc935e98936597d826de91e634c55b5841fd53
+    pristine_git_object: 0118caec4ff370c9c3fe083cfa00588ff7a93200
   docs/models/types/submodifygroupedinvoicingparams.md:
     id: c95f1b55ad9d
     last_write_checksum: sha1:7843b51a3f61b2dfb9840958b72eaf136b5bcc41
@@ -3337,8 +3345,8 @@ trackedFiles:
     pristine_git_object: 8edb1aad5a38b2242da847fc44ff08ea30070923
   docs/sdks/coupons/README.md:
     id: c5a54fa79a72
-    last_write_checksum: sha1:984df51586bd49abbf482beb87cb2ed82a819365
-    pristine_git_object: 861146712380ea2250bbe72bfa7db3e54de34d39
+    last_write_checksum: sha1:c629a744376b412b9848aeb817ba86b6681c5222
+    pristine_git_object: 69ac0edd35ecc93836c83bdf5cbf10c0ed6360bc
   docs/sdks/creditgrants/README.md:
     id: 21efd82e7bce
     last_write_checksum: sha1:bc1f9c7616b0ade6051dd9932c88a28e8c884c2f
@@ -3787,6 +3795,10 @@ trackedFiles:
     id: 228fd6abd3c2
     last_write_checksum: sha1:3f5ca9ff10c9eb1f633518f547def5cb1ab9f1c4
     pristine_git_object: 2bf30fed6477aaa35e6387caedd48eafb9422012
+  models/dtos/getcouponbycode.go:
+    id: e42512e5fa72
+    last_write_checksum: sha1:40608f2349246fa313cb32d90c3a6010045d4f2b
+    pristine_git_object: 33944e76ff0b9c201b639f599e9f35254bda5e16
   models/dtos/getcreditgrant.go:
     id: 2143dc7f6107
     last_write_checksum: sha1:6230a9e687ba19badbc652b5f4ee427fc699c0c8
@@ -4721,8 +4733,8 @@ trackedFiles:
     pristine_git_object: b58a1e338599234909df03255b8104e3e1c04310
   models/types/couponfilter.go:
     id: 01dda04ea1ae
-    last_write_checksum: sha1:0d9abaec7270a37eb6f8a940a42f04286c9561a8
-    pristine_git_object: 6908d368e5f0c7313a5e84e73baac82015078507
+    last_write_checksum: sha1:4a70bb77911c615428c6c07448919315b739fc70
+    pristine_git_object: 0820cde16615d0c51722fde12492bb85ebb5a5cb
   models/types/couponresponse.go:
     id: 6ca1f84d98ca
     last_write_checksum: sha1:47009a213ae9630e7858b0e8956801a44b75001d
@@ -5669,8 +5681,8 @@ trackedFiles:
     pristine_git_object: 7cff1758583a83882d1808e00809bbccae707bd0
   models/types/submodifycouponparams.go:
     id: 0f073ec03871
-    last_write_checksum: sha1:e90357da07bcd5ba508b0bc31dbbe7b06d0850f2
-    pristine_git_object: 3f109821f25d5a07029be2bbaae99d7dbedb9187
+    last_write_checksum: sha1:afdd9bee789786a29ee00b0feb3c6a08ecf41a22
+    pristine_git_object: dd60532a79c1c24b2cb4ed17c134ea518891240f
   models/types/submodifygroupedinvoicingparams.go:
     id: dff6a4ed901e
     last_write_checksum: sha1:19e81182b6f290141c5abf10066d1bf2f41b3572
@@ -6213,8 +6225,8 @@ trackedFiles:
     pristine_git_object: f10d3f30b289280a9415133c6bd0b4790aae8e5f
   tirdad.go:
     id: 68ff2a13be69
-    last_write_checksum: sha1:0b3200bc76a993370887cc10ccc53f8384bdf776
-    pristine_git_object: 20af02e45f4bbfd3640ae680a13df0e0f63f4ad5
+    last_write_checksum: sha1:e3b05934e09be7c1e0559dd984abf1a6f0082b55
+    pristine_git_object: 54de8eec20601ec3994d4c843a946e98fb5e636b
   types/bigint.go:
     id: 6f911e1a03c3
     last_write_checksum: sha1:49b004005d0461fb04b846eca062b070b0360b31
@@ -6523,6 +6535,18 @@ examples:
         application/json: {"cadence": "repeated", "name": "<value>", "type": "percentage"}
       responses:
         "201":
+          application/json: {}
+        "400":
+          application/json: {}
+        "500":
+          application/json: {}
+  getCouponByCode:
+    speakeasy-default-get-coupon-by-code:
+      parameters:
+        path:
+          code: "<value>"
+      responses:
+        "200":
           application/json: {}
         "400":
           application/json: {}
