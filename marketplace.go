@@ -32,7 +32,7 @@ func newMarketplace(rootSDK *Tirdad, sdkConfig config.SDKConfiguration, hooks *h
 }
 
 // PostMarketplaceAgreements - Register an AWS Marketplace agreement
-// Registers an AWS Marketplace buyer agreement against an existing FlexPrice subscription, upserting plan/subscription/customer integration mappings in one call.
+// Registers an AWS Marketplace buyer agreement against an existing Flexprice subscription, upserting plan/subscription/customer integration mappings in one call.
 func (s *Marketplace) PostMarketplaceAgreements(ctx context.Context, request types.RegisterMarketplaceAgreementRequest, opts ...dtos.Option) (*dtos.PostMarketplaceAgreementsResponse, error) {
 	o := dtos.Options{}
 	supportedOptions := []string{
