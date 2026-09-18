@@ -2,7 +2,7 @@
 
 package tirdad
 
-// Generated from OpenAPI doc version 1.0 and generator version 2.935.1
+// Generated from OpenAPI doc version 1.0 and generator version 2.938.0
 
 import (
 	"context"
@@ -165,11 +165,11 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *Tirdad {
 	sdk := &Tirdad{
-		SDKVersion: "2.1.30",
+		SDKVersion: "2.1.31",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:         "speakeasy-sdk/go 2.1.30 2.935.1 1.0 github.com/tirdad-billing/go-sdk/v2",
-			SDKVersion:        "2.1.30",
-			GenVersion:        "2.935.1",
+			UserAgent:         "speakeasy-sdk/go 2.1.31 2.938.0 1.0 github.com/tirdad-billing/go-sdk/v2",
+			SDKVersion:        "2.1.31",
+			GenVersion:        "2.938.0",
 			OpenAPIDocVersion: "1.0",
 			ServerList:        ServerList,
 		},

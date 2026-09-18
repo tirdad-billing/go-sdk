@@ -7,6 +7,7 @@
 * [CreateCheckoutSession](#createcheckoutsession) - Create checkout session
 * [GetCheckoutSession](#getcheckoutsession) - Get checkout session
 * [DeleteCheckoutSession](#deletecheckoutsession) - Delete checkout session
+* [CancelCheckoutSession](#cancelcheckoutsession) - Cancel checkout session
 
 ## CreateCheckoutSession
 
@@ -33,7 +34,7 @@ func main() {
     )
 
     res, err := s.Checkout.CreateCheckoutSession(ctx, types.CreateCheckoutSessionRequest{
-        Action: types.CheckoutActionAddAddon,
+        Action: types.CheckoutActionPayInvoice,
         CustomerExternalID: "<id>",
         PaymentProvider: types.CheckoutPaymentProviderRazorpay,
     })
@@ -169,5 +170,58 @@ func main() {
 | Error Type           | Status Code          | Content Type         |
 | -------------------- | -------------------- | -------------------- |
 | errors.ErrorResponse | 404                  | application/json     |
+| errors.ErrorResponse | 500                  | application/json     |
+| errors.APIError      | 4XX, 5XX             | \*/\*                |
+
+## CancelCheckoutSession
+
+Cancel checkout session
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="cancelCheckoutSession" method="post" path="/checkout/sessions/{id}/cancel" -->
+```go
+package main
+
+import(
+	"context"
+	tirdad "github.com/tirdad-billing/go-sdk/v2"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := tirdad.New(
+        tirdad.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Checkout.CancelCheckoutSession(ctx, "<id>")
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.CheckoutSessionResponse != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | `string`                                              | :heavy_check_mark:                                    | Checkout session ID                                   |
+| `opts`                                                | [][dtos.Option](../../models/dtos/option.md)          | :heavy_minus_sign:                                    | The options for this request.                         |
+
+### Response
+
+**[*dtos.CancelCheckoutSessionResponse](../../models/dtos/cancelcheckoutsessionresponse.md), error**
+
+### Errors
+
+| Error Type           | Status Code          | Content Type         |
+| -------------------- | -------------------- | -------------------- |
+| errors.ErrorResponse | 400, 404             | application/json     |
 | errors.ErrorResponse | 500                  | application/json     |
 | errors.APIError      | 4XX, 5XX             | \*/\*                |
