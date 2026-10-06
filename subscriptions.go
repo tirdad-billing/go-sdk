@@ -230,7 +230,7 @@ func (s *Subscriptions) CreateSubscription(ctx context.Context, request types.Cr
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -255,7 +255,7 @@ func (s *Subscriptions) CreateSubscription(ctx context.Context, request types.Cr
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -496,7 +496,7 @@ func (s *Subscriptions) AddSubscriptionAddon(ctx context.Context, request types.
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -521,7 +521,7 @@ func (s *Subscriptions) AddSubscriptionAddon(ctx context.Context, request types.
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -762,7 +762,7 @@ func (s *Subscriptions) RemoveSubscriptionAddon(ctx context.Context, request typ
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -787,7 +787,7 @@ func (s *Subscriptions) RemoveSubscriptionAddon(ctx context.Context, request typ
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -1025,7 +1025,7 @@ func (s *Subscriptions) QuerySubscriptionLineItems(ctx context.Context, request 
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -1050,7 +1050,7 @@ func (s *Subscriptions) QuerySubscriptionLineItems(ctx context.Context, request 
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -1293,7 +1293,7 @@ func (s *Subscriptions) UpdateSubscriptionLineItem(ctx context.Context, id strin
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -1318,7 +1318,7 @@ func (s *Subscriptions) UpdateSubscriptionLineItem(ctx context.Context, id strin
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -1561,7 +1561,7 @@ func (s *Subscriptions) DeleteSubscriptionLineItem(ctx context.Context, id strin
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -1586,7 +1586,7 @@ func (s *Subscriptions) DeleteSubscriptionLineItem(ctx context.Context, id strin
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -1627,14 +1627,7 @@ func (s *Subscriptions) DeleteSubscriptionLineItem(ctx context.Context, id strin
 
 // ListAllSubscriptionSchedules - List all subscription schedules
 // Use when listing or searching scheduled changes across subscriptions (e.g. admin view). Returns schedules with optional filtering.
-func (s *Subscriptions) ListAllSubscriptionSchedules(ctx context.Context, pendingOnly *bool, subscriptionID *string, limit *int64, offset *int64, opts ...dtos.Option) (*dtos.ListAllSubscriptionSchedulesResponse, error) {
-	request := dtos.ListAllSubscriptionSchedulesRequest{
-		PendingOnly:    pendingOnly,
-		SubscriptionID: subscriptionID,
-		Limit:          limit,
-		Offset:         offset,
-	}
-
+func (s *Subscriptions) ListAllSubscriptionSchedules(ctx context.Context, request dtos.ListAllSubscriptionSchedulesRequest, opts ...dtos.Option) (*dtos.ListAllSubscriptionSchedulesResponse, error) {
 	o := dtos.Options{}
 	supportedOptions := []string{
 		dtos.SupportedOptionRetries,
@@ -2469,7 +2462,7 @@ func (s *Subscriptions) QuerySubscription(ctx context.Context, request types.Sub
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -2494,7 +2487,7 @@ func (s *Subscriptions) QuerySubscription(ctx context.Context, request types.Sub
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -2732,7 +2725,7 @@ func (s *Subscriptions) GetSubscriptionUsage(ctx context.Context, request types.
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -2757,7 +2750,7 @@ func (s *Subscriptions) GetSubscriptionUsage(ctx context.Context, request types.
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -2992,7 +2985,7 @@ func (s *Subscriptions) GetSubscription(ctx context.Context, id string, opts ...
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -3017,7 +3010,7 @@ func (s *Subscriptions) GetSubscription(ctx context.Context, id string, opts ...
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -3260,7 +3253,7 @@ func (s *Subscriptions) UpdateSubscription(ctx context.Context, id string, body 
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -3285,7 +3278,7 @@ func (s *Subscriptions) UpdateSubscription(ctx context.Context, id string, body 
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -3528,7 +3521,7 @@ func (s *Subscriptions) ActivateSubscription(ctx context.Context, id string, bod
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -3553,7 +3546,7 @@ func (s *Subscriptions) ActivateSubscription(ctx context.Context, id string, bod
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -3790,7 +3783,7 @@ func (s *Subscriptions) GetSubscriptionAddonAssociations(ctx context.Context, id
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -3815,7 +3808,7 @@ func (s *Subscriptions) GetSubscriptionAddonAssociations(ctx context.Context, id
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -4058,7 +4051,7 @@ func (s *Subscriptions) CancelSubscription(ctx context.Context, id string, body 
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -4083,7 +4076,7 @@ func (s *Subscriptions) CancelSubscription(ctx context.Context, id string, body 
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -4328,7 +4321,7 @@ func (s *Subscriptions) ExecuteSubscriptionChange(ctx context.Context, id string
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -4353,7 +4346,7 @@ func (s *Subscriptions) ExecuteSubscriptionChange(ctx context.Context, id string
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -4598,7 +4591,7 @@ func (s *Subscriptions) PreviewSubscriptionChange(ctx context.Context, id string
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -4623,7 +4616,7 @@ func (s *Subscriptions) PreviewSubscriptionChange(ctx context.Context, id string
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -4876,7 +4869,7 @@ func (s *Subscriptions) ExecuteSubscriptionPlanChangeV2(ctx context.Context, id 
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -4901,7 +4894,7 @@ func (s *Subscriptions) ExecuteSubscriptionPlanChangeV2(ctx context.Context, id 
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -5146,7 +5139,7 @@ func (s *Subscriptions) PreviewSubscriptionPlanChangeV2(ctx context.Context, id 
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -5171,7 +5164,7 @@ func (s *Subscriptions) PreviewSubscriptionPlanChangeV2(ctx context.Context, id 
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -5413,7 +5406,7 @@ func (s *Subscriptions) GetSubscriptionEntitlements(ctx context.Context, id stri
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -5438,7 +5431,7 @@ func (s *Subscriptions) GetSubscriptionEntitlements(ctx context.Context, id stri
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -5675,7 +5668,7 @@ func (s *Subscriptions) GetSubscriptionUpcomingGrants(ctx context.Context, id st
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -5700,7 +5693,7 @@ func (s *Subscriptions) GetSubscriptionUpcomingGrants(ctx context.Context, id st
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -5945,7 +5938,7 @@ func (s *Subscriptions) CreateSubscriptionLineItem(ctx context.Context, id strin
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -5970,7 +5963,7 @@ func (s *Subscriptions) CreateSubscriptionLineItem(ctx context.Context, id strin
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -6010,7 +6003,8 @@ func (s *Subscriptions) CreateSubscriptionLineItem(ctx context.Context, id strin
 }
 
 // ExecuteSubscriptionModify - Execute subscription modification
-// Execute a mid-cycle subscription modification (inheritance, quantity change, grouped invoicing, trial end, coupon, tax, a single addon add/remove, or a batch of addon adds and removes settled as one netted document).
+// Execute a mid-cycle subscription modification (inheritance, line item change, grouped invoicing, trial end, coupon, tax, a single addon add/remove, or a batch of addon adds and removes settled as one netted document).
+// Type "quantity_change" is deprecated: use "line_item_change", which changes a fixed charge's quantity, price, or both, with the same proration and checkout behaviour.
 func (s *Subscriptions) ExecuteSubscriptionModify(ctx context.Context, id string, body types.ExecuteSubscriptionModifyRequest, opts ...dtos.Option) (*dtos.ExecuteSubscriptionModifyResponse, error) {
 	request := dtos.ExecuteSubscriptionModifyRequest{
 		ID:   id,
@@ -6215,7 +6209,7 @@ func (s *Subscriptions) ExecuteSubscriptionModify(ctx context.Context, id string
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -6240,7 +6234,7 @@ func (s *Subscriptions) ExecuteSubscriptionModify(ctx context.Context, id string
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -6280,7 +6274,8 @@ func (s *Subscriptions) ExecuteSubscriptionModify(ctx context.Context, id string
 }
 
 // PreviewSubscriptionModify - Preview subscription modification
-// Preview the impact of a mid-cycle subscription modification (inheritance, quantity change, grouped invoicing, trial end, coupon, tax, a single addon add/remove, or a batch of addon adds and removes) without committing changes.
+// Preview the impact of a mid-cycle subscription modification (inheritance, line item change, grouped invoicing, trial end, coupon, tax, a single addon add/remove, or a batch of addon adds and removes) without committing changes.
+// Type "quantity_change" is deprecated: use "line_item_change".
 func (s *Subscriptions) PreviewSubscriptionModify(ctx context.Context, id string, body types.ExecuteSubscriptionModifyRequest, opts ...dtos.Option) (*dtos.PreviewSubscriptionModifyResponse, error) {
 	request := dtos.PreviewSubscriptionModifyRequest{
 		ID:   id,
@@ -6485,7 +6480,7 @@ func (s *Subscriptions) PreviewSubscriptionModify(ctx context.Context, id string
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -6510,7 +6505,7 @@ func (s *Subscriptions) PreviewSubscriptionModify(ctx context.Context, id string
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -6960,7 +6955,7 @@ func (s *Subscriptions) GetSubscriptionV2(ctx context.Context, id string, expand
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{
@@ -6985,7 +6980,7 @@ func (s *Subscriptions) GetSubscriptionV2(ctx context.Context, id string, expand
 
 			var out errors.ErrorResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, errors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = types.HTTPMetadata{

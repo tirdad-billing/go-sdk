@@ -386,6 +386,7 @@ package main
 import(
 	"context"
 	tirdad "github.com/tirdad-billing/go-sdk/v2"
+	"github.com/tirdad-billing/go-sdk/v2/models/dtos"
 	"log"
 )
 
@@ -396,7 +397,7 @@ func main() {
         tirdad.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Subscriptions.ListAllSubscriptionSchedules(ctx, nil, nil, nil, nil)
+    res, err := s.Subscriptions.ListAllSubscriptionSchedules(ctx, dtos.ListAllSubscriptionSchedulesRequest{})
     if err != nil {
         log.Fatal(err)
     }
@@ -408,14 +409,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                             | Type                                                  | Required                                              | Description                                           |
-| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
-| `pendingOnly`                                         | `*bool`                                               | :heavy_minus_sign:                                    | Filter to pending schedules only                      |
-| `subscriptionID`                                      | `*string`                                             | :heavy_minus_sign:                                    | Filter by subscription ID                             |
-| `limit`                                               | `*int64`                                              | :heavy_minus_sign:                                    | Limit results                                         |
-| `offset`                                              | `*int64`                                              | :heavy_minus_sign:                                    | Offset for pagination                                 |
-| `opts`                                                | [][dtos.Option](../../models/dtos/option.md)          | :heavy_minus_sign:                                    | The options for this request.                         |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [dtos.ListAllSubscriptionSchedulesRequest](../../models/dtos/listallsubscriptionschedulesrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][dtos.Option](../../models/dtos/option.md)                                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
 
 ### Response
 
@@ -1330,7 +1328,8 @@ func main() {
 
 ## ExecuteSubscriptionModify
 
-Execute a mid-cycle subscription modification (inheritance, quantity change, grouped invoicing, trial end, coupon, tax, a single addon add/remove, or a batch of addon adds and removes settled as one netted document).
+Execute a mid-cycle subscription modification (inheritance, line item change, grouped invoicing, trial end, coupon, tax, a single addon add/remove, or a batch of addon adds and removes settled as one netted document).
+Type "quantity_change" is deprecated: use "line_item_change", which changes a fixed charge's quantity, price, or both, with the same proration and checkout behaviour.
 
 ### Example Usage
 
@@ -1387,7 +1386,8 @@ func main() {
 
 ## PreviewSubscriptionModify
 
-Preview the impact of a mid-cycle subscription modification (inheritance, quantity change, grouped invoicing, trial end, coupon, tax, a single addon add/remove, or a batch of addon adds and removes) without committing changes.
+Preview the impact of a mid-cycle subscription modification (inheritance, line item change, grouped invoicing, trial end, coupon, tax, a single addon add/remove, or a batch of addon adds and removes) without committing changes.
+Type "quantity_change" is deprecated: use "line_item_change".
 
 ### Example Usage
 
@@ -1410,7 +1410,7 @@ func main() {
     )
 
     res, err := s.Subscriptions.PreviewSubscriptionModify(ctx, "<id>", types.ExecuteSubscriptionModifyRequest{
-        Type: types.SubscriptionModifyTypeTax,
+        Type: types.SubscriptionModifyTypeAddon,
     })
     if err != nil {
         log.Fatal(err)
