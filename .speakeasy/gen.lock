@@ -1,16 +1,16 @@
 lockVersion: 2.0.0
-id: 4a2eecb2-ed64-4f67-8e65-3d86fe06b32b
+id: 634893b2-c71e-4769-84ee-dfe8f5c8a875
 management:
   docChecksum: 8e9594e0abd0de6cc426fa0062da3cde
   docVersion: "1.0"
   speakeasyVersion: 1.802.0
   generationVersion: 2.948.4
-  releaseVersion: 2.1.41
-  configChecksum: b0153fe95c054a3b6b1ec40c2ad631c5
+  releaseVersion: 2.1.42
+  configChecksum: f0fbcdfb0ca14627f60d0761c61bd0c9
 persistentEdits:
-  generation_id: 8eb9b55f-ed51-48b8-b9d8-15e3a3d4c248
-  pristine_commit_hash: 79a2227df8c53fe92bbeb4664c9c5436d6527c52
-  pristine_tree_hash: 7b9ffa00cf9a6e0dc740d93b38520b424bd41fc8
+  generation_id: d89d416c-5944-4792-9012-a1a5fa366c3b
+  pristine_commit_hash: a409a01a29381d21b89f0f84dec46914046cde21
+  pristine_tree_hash: 052645f0470a626a681dd4dd326d9c415048196c
 features:
   go:
     additionalDependencies: 0.1.0
@@ -8858,8 +8858,8 @@ trackedFiles:
     pristine_git_object: 8e222efb571d3c4e7c243e1c2fe5f4327db66642
   tirdad.go:
     id: 68ff2a13be69
-    last_write_checksum: sha1:da4570a68c33a34b79143a5c356b7a00048a2b33
-    pristine_git_object: 069210d505887e5e3b47a80e04484b3451a758ee
+    last_write_checksum: sha1:576732d339eb9e981397f7821f153fe7fd352cdc
+    pristine_git_object: c106024546f5412362b55424401eba9eb2c1b241
   types/bigint.go:
     id: 6f911e1a03c3
     last_write_checksum: sha1:49b004005d0461fb04b846eca062b070b0360b31
