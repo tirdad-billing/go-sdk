@@ -169,10 +169,10 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *Tirdad {
 	sdk := &Tirdad{
-		SDKVersion: "2.1.42",
+		SDKVersion: "2.1.43",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:         "speakeasy-sdk/go 2.1.42 2.948.4 1.0 github.com/tirdad-billing/go-sdk/v2",
-			SDKVersion:        "2.1.42",
+			UserAgent:         "speakeasy-sdk/go 2.1.43 2.948.4 1.0 github.com/tirdad-billing/go-sdk/v2",
+			SDKVersion:        "2.1.43",
 			GenVersion:        "2.948.4",
 			OpenAPIDocVersion: "1.0",
 			ServerList:        ServerList,
