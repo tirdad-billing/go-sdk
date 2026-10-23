@@ -77,6 +77,7 @@ type Tirdad struct {
 	Marketplace        *Marketplace
 	Payments           *Payments
 	Plans              *Plans
+	SelfBilling        *SelfBilling
 	Prices             *Prices
 	PriceUnits         *PriceUnits
 	Rbac               *Rbac
@@ -168,10 +169,10 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *Tirdad {
 	sdk := &Tirdad{
-		SDKVersion: "2.1.40",
+		SDKVersion: "2.1.41",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:         "speakeasy-sdk/go 2.1.40 2.948.4 1.0 github.com/tirdad-billing/go-sdk/v2",
-			SDKVersion:        "2.1.40",
+			UserAgent:         "speakeasy-sdk/go 2.1.41 2.948.4 1.0 github.com/tirdad-billing/go-sdk/v2",
+			SDKVersion:        "2.1.41",
 			GenVersion:        "2.948.4",
 			OpenAPIDocVersion: "1.0",
 			ServerList:        ServerList,
@@ -213,6 +214,7 @@ func New(opts ...SDKOption) *Tirdad {
 	sdk.Marketplace = newMarketplace(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Payments = newPayments(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Plans = newPlans(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.SelfBilling = newSelfBilling(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Prices = newPrices(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.PriceUnits = newPriceUnits(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Rbac = newRbac(sdk, sdk.sdkConfiguration, sdk.hooks)

@@ -7,33 +7,33 @@ import (
 	"github.com/tirdad-billing/go-sdk/v2/models/types"
 )
 
-type GetTenantBillingUsageResponse struct {
+type GetTenantBillingSummaryResponse struct {
 	HTTPMeta types.HTTPMetadata `json:"-"`
-	// Tenant billing usage
-	TenantBillingUsage *types.TenantBillingUsage
+	// OK
+	SelfBillingSummaryResponse *types.SelfBillingSummaryResponse
 }
 
-func (g GetTenantBillingUsageResponse) MarshalJSON() ([]byte, error) {
+func (g GetTenantBillingSummaryResponse) MarshalJSON() ([]byte, error) {
 	return utils.MarshalJSON(g, "", false)
 }
 
-func (g *GetTenantBillingUsageResponse) UnmarshalJSON(data []byte) error {
+func (g *GetTenantBillingSummaryResponse) UnmarshalJSON(data []byte) error {
 	if err := utils.UnmarshalJSON(data, &g, "", false, []string{"HttpMeta"}); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (g *GetTenantBillingUsageResponse) GetHTTPMeta() types.HTTPMetadata {
+func (g *GetTenantBillingSummaryResponse) GetHTTPMeta() types.HTTPMetadata {
 	if g == nil {
 		return types.HTTPMetadata{}
 	}
 	return g.HTTPMeta
 }
 
-func (g *GetTenantBillingUsageResponse) GetTenantBillingUsage() *types.TenantBillingUsage {
+func (g *GetTenantBillingSummaryResponse) GetSelfBillingSummaryResponse() *types.SelfBillingSummaryResponse {
 	if g == nil {
 		return nil
 	}
-	return g.TenantBillingUsage
+	return g.SelfBillingSummaryResponse
 }
