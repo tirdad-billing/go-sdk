@@ -1,16 +1,16 @@
 lockVersion: 2.0.0
-id: 2b070932-7ba0-40d5-9990-693a5e22fc84
+id: 9840ed4b-11fa-494b-847e-d70811ca162f
 management:
-  docChecksum: a72b86372248009e2458379cd9eff984
+  docChecksum: 68e016337fe02bacc60ca1b4c0b1e21e
   docVersion: "1.0"
   speakeasyVersion: 1.802.0
   generationVersion: 2.948.4
-  releaseVersion: 2.1.45
-  configChecksum: c3ff01e9afc9b496a50ed73671004e61
+  releaseVersion: 2.1.46
+  configChecksum: eb5f1903e6f2553e9584a2ecbb3e5f12
 persistentEdits:
-  generation_id: 21a8653a-d768-45b8-8993-671f9698b491
-  pristine_commit_hash: 548a33beaeb87db19f8f382004b760658193d8f6
-  pristine_tree_hash: c33efac33e7fb4e3f5a84cb351128878b98e2f1b
+  generation_id: d6a825e4-a9e8-4eba-a2bb-1d16f8de68b7
+  pristine_commit_hash: d0176560b29bbbfc5feb20d04f63f8b3bf04f63b
+  pristine_tree_hash: ef1ebd1e9649f280e07eff9ee34792e0e3a98635
 features:
   go:
     additionalDependencies: 0.1.0
@@ -2610,8 +2610,8 @@ trackedFiles:
     pristine_git_object: f0dd98ab5aac2a1aeeb19b60f336ae0531f073cb
   docs/models/types/commitmentresponse.md:
     id: 7a484c785c47
-    last_write_checksum: sha1:260a10db4de6299057cfc7c734d9386d12f76733
-    pristine_git_object: 73306b5b8e6e388b0cdf6f3d39dff8aa97bc862e
+    last_write_checksum: sha1:64edacc4059081d1a7e968e2ce57a066f20d758a
+    pristine_git_object: 92da5b3670650f0acaef68ee5de956149007f003
   docs/models/types/commitmentscopeinput.md:
     id: 3cef551e44b9
     last_write_checksum: sha1:991e5e89a7f7929cf196d4c53bbfb53ab13e245a
@@ -2754,8 +2754,8 @@ trackedFiles:
     pristine_git_object: 87fb19858a03cb992c8ea64901fb6986b7a8a7b8
   docs/models/types/createcommitmentrequest.md:
     id: 557ab6620349
-    last_write_checksum: sha1:d46e26e74fb70049580722ab657f449cc34f39ba
-    pristine_git_object: 49bc7cc465fee108337a5ff645ee013d05b3d6ab
+    last_write_checksum: sha1:37bf2c6af7341b9e28cba072d0e0c9457c091103
+    pristine_git_object: f5f6560236ed4495050786bf9709c7a549a9b3d3
   docs/models/types/createcostsheetrequest.md:
     id: 6e4dee3cc598
     last_write_checksum: sha1:ae66fb628128bcb2551ca8ed4dda3d684761233e
@@ -5206,8 +5206,8 @@ trackedFiles:
     pristine_git_object: 88f78c0cd9ef115e3de307ba46b819af2075847f
   docs/sdks/commitments/README.md:
     id: b2feef677029
-    last_write_checksum: sha1:59fbc6e7242023072472f33698deca5c8644669a
-    pristine_git_object: ebf1ab2c1ca46f2a59bfac2a520d3f4c15e865be
+    last_write_checksum: sha1:935463d0b2ead5b6f703308636bd5888afcf650a
+    pristine_git_object: 9d561f3c22c98185b1b74c58ff50e106b5055d5b
   docs/sdks/contracts/README.md:
     id: da897d096992
     last_write_checksum: sha1:e624053471ef31796705c094117049cd88fdfcc2
@@ -7198,8 +7198,8 @@ trackedFiles:
     pristine_git_object: d26337df66671e6876b2be1846a6ee20ff691997
   models/types/commitmentresponse.go:
     id: 210a8c75f700
-    last_write_checksum: sha1:e3c59385a082e0bc610537e9ae3e6f9da7bd5758
-    pristine_git_object: 5bc6d84c57361dc120d3d1de8f3f932221635dee
+    last_write_checksum: sha1:5a97993d3828649108f22ebed5205b2bb3687233
+    pristine_git_object: a199ebed9750ba0ec640a6b6a06d1d74afa15766
   models/types/commitmentscopeinput.go:
     id: f19273ff03c7
     last_write_checksum: sha1:f461e6df41c9fbb66426e3bfd9cacfe5f23987f0
@@ -7330,8 +7330,8 @@ trackedFiles:
     pristine_git_object: 5f4637acb3cc2d9414ee1d47d51da502d8e011da
   models/types/createcommitmentrequest.go:
     id: 58d41dc80399
-    last_write_checksum: sha1:994c162520c7740fb4d7ceac6337006b270fd0ad
-    pristine_git_object: 590b73e8f188f7a62b65deadf36d01ede119c8d4
+    last_write_checksum: sha1:3d7a6adfa77868efe17e3d80fbb5e69989ea193d
+    pristine_git_object: 5bcbf151d4d57dc57d6ace48f69f127c0cb7e861
   models/types/createcostsheetrequest.go:
     id: 4bea1fe798c7
     last_write_checksum: sha1:d68832c7af6c44f65958e1cc4cfd756c2565fc43
@@ -9714,8 +9714,8 @@ trackedFiles:
     pristine_git_object: 8e222efb571d3c4e7c243e1c2fe5f4327db66642
   tirdad.go:
     id: 68ff2a13be69
-    last_write_checksum: sha1:a145d4aec7e1631b8cf2865a6816b5ce03bd4e0f
-    pristine_git_object: d35aac2a898571e6d3b64b9577d128ddb730cea1
+    last_write_checksum: sha1:d97d7512908070f14252de1e913c2872d1962201
+    pristine_git_object: 850537ae1f82b233009665fe42b6d88387a7106d
   types/bigint.go:
     id: 6f911e1a03c3
     last_write_checksum: sha1:49b004005d0461fb04b846eca062b070b0360b31
@@ -10271,7 +10271,7 @@ examples:
   createCommitment:
     speakeasy-default-create-commitment:
       requestBody:
-        application/json: {"end_date": "2024-12-01T13:56:43.281Z", "measurement": "billing_period", "name": "<value>", "scope": {"entity_type": "group"}, "start_date": "2026-08-30T15:34:29.816Z", "type": "amount"}
+        application/json: {"measurement": "billing_period", "name": "<value>", "scope": {"entity_type": "group"}, "start_date": "2025-03-05T22:53:12.661Z", "type": "quantity"}
       responses:
         "201":
           application/json: {}
@@ -10282,7 +10282,7 @@ examples:
   previewCommitment:
     speakeasy-default-preview-commitment:
       requestBody:
-        application/json: {"end_date": "2025-03-29T18:57:47.888Z", "measurement": "window", "name": "<value>", "scope": {"entity_type": "group"}, "start_date": "2024-09-25T08:18:25.213Z", "type": "amount"}
+        application/json: {"measurement": "billing_period", "name": "<value>", "scope": {"entity_type": "meter"}, "start_date": "2024-11-23T11:41:25.905Z", "type": "amount"}
       responses:
         "200":
           application/json: {}
